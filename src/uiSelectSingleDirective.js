@@ -75,7 +75,7 @@ uis.directive('uiSelectSingle', ['$timeout','$compile', function($timeout, $comp
       scope.$on('uis:close', function (event, skipFocusser) {
         $timeout(function(){
           $select.focusser.prop('disabled', false);
-          if (!skipFocusser) $select.focusser[0].focus();
+          if (!skipFocusser && !isIos) $select.focusser[0].focus();
         },0,false);
       });
 

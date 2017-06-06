@@ -163,7 +163,7 @@ uis.controller('uiSelectCtrl',
 
   ctrl.focusSearchInput = function (initSearchValue) {
     ctrl.search = initSearchValue || ctrl.search;
-    ctrl.searchInput[0].focus();
+    if(!isIos) ctrl.searchInput[0].focus();
   };
 
   ctrl.findGroupByName = function(name) {
@@ -457,7 +457,7 @@ uis.controller('uiSelectCtrl',
     ctrl.select(null);
     $event.stopPropagation();
     $timeout(function() {
-      ctrl.focusser[0].focus();
+      if(!isIos) ctrl.focusser[0].focus();
     }, 0, false);
   };
 

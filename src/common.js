@@ -93,6 +93,7 @@ if (angular.element.prototype.closest === undefined) {
 }
 
 var latestId = 0;
+var isIos = /iphone|ipod|ipad/.test( window.navigator.userAgent.toLowerCase());
 
 var uis = angular.module('ui.select', [])
 
