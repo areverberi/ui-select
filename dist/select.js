@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2017-06-06T12:29:47.303Z
+ * Version: 0.19.8 - 2017-06-07T12:55:39.439Z
  * License: MIT
  */
 
@@ -743,11 +743,11 @@ uis.controller('uiSelectCtrl',
   ctrl.toggle = function(e) {
     if (ctrl.open) {
       ctrl.close();
-      e.preventDefault();
-      e.stopPropagation();
     } else {
       ctrl.activate();
     }
+    e.preventDefault();
+    e.stopPropagation();
   };
 
   // Set default function for locked choices - avoids unnecessary
